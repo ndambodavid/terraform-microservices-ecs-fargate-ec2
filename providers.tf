@@ -1,6 +1,4 @@
 terraform {
-  required_version = ">= 1.0.0" # Ensure that the Terraform version is 1.0.0 or higher
-
   required_providers {
     aws = {
       source  = "hashicorp/aws" # Specify the source of the AWS provider
@@ -10,6 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1" # Set the AWS region to US East (N. Virginia)
+  region = var.aws_region # Set the AWS region to US East (N. Virginia)
 }
 
